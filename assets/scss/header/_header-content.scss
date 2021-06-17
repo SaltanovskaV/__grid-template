@@ -1,0 +1,35 @@
+.header-content {
+  position: relative;
+  z-index: 1;
+
+  &_container {
+    @extend %container;
+  }
+
+  &-title {
+    @include lg-min {
+      margin: 0 0 53px 0;
+    }
+    @include lg-md {
+      margin: 0 0 43px 0;
+    }
+    @include md {
+      margin: 0 0 33px 0;
+    }
+  }
+  &_action {
+    display: flex;
+    justify-content: center;
+
+    gap: $gap;
+
+    @media (max-width: $sm) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+
+      gap: $gap;
+    }
+  }
+}
