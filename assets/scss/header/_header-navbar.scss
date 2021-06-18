@@ -1,4 +1,9 @@
 .header-navbar {
+  display: grid;
+  align-items: center;
+  letter-spacing: 0.1em;
+  justify-items: end;
+
   &__btn {
     position: relative;
     width: 30px;
@@ -55,17 +60,16 @@
   }
 
   &__list {
-    /*margin: 0 -$gap 0 0;*/
-    padding: 0;
-
-    list-style: none;
-
     @include md-min {
       display: grid;
       justify-content: end;
-
       grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-      @include unlist(0 -$gap 0 0);
+      padding: 0;
+      margin: 0 -20px 0 0;
+      list-style: none;
+      width: 100%;
+      text-align: center;
+      /* @include unlist(0 0 0);*/
     }
     @include md {
       display: none;

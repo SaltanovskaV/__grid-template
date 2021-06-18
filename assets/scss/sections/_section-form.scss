@@ -10,14 +10,13 @@
   }
 
   &-container {
-    display: grid;
-
     max-width: $ul;
     margin: auto;
     padding-right: $gap;
     padding-left: $gap;
-
+    display: grid;
     gap: $gap;
+
     @include lg-min {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -33,22 +32,19 @@
   }
   &-item__input {
     display: block;
-
     width: 100%;
     width: 100%;
     height: 60px;
     padding-right: 30px;
     padding-left: 30px;
-
     transition: background-color 0.5s, border-color 0.5s;
     letter-spacing: 0.15em;
-
     color: $color-light;
     border: 2px solid rgba(255, 255, 255, 0);
     border-bottom-color: rgba(255, 255, 255, 0.25);
     background-color: rgba(255, 255, 255, 0.05);
-
     font-size: 1.125rem;
+    outline: none;
 
     &:hover,
     &:focus {
@@ -56,7 +52,9 @@
       border-bottom-color: $color-light;
       background-color: rgba(255, 255, 255, 0.15);
     }
-    &:hover::placeholder {
+
+    &:hover,
+    :active::placeholder {
       color: rgb(208, 210, 216);
     }
   }

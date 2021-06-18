@@ -481,9 +481,7 @@ a {
 
 .header-menu__container {
   display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  /* align-items: center;*/
   grid-template-columns: auto 1fr;
 }
 
@@ -502,6 +500,15 @@ a {
   margin-right: 4px;
   padding: 14px 1px 13px 5px;
   border: 3px solid #d53d27;
+}
+
+.header-navbar {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.1em;
+  justify-items: end;
 }
 
 .header-navbar__btn {
@@ -564,12 +571,6 @@ a {
   -webkit-transform: rotate(-135deg);
       -ms-transform: rotate(-135deg);
           transform: rotate(-135deg);
-}
-
-.header-navbar__list {
-  /*margin: 0 -$gap 0 0;*/
-  padding: 0;
-  list-style: none;
 }
 
 .header-navbar__link {
@@ -739,12 +740,12 @@ a {
 }
 
 .about-container {
-  display: grid;
-  width: 100%;
   max-width: 1340px;
   margin: auto;
   padding-right: 20px;
   padding-left: 20px;
+  display: grid;
+  width: 100%;
 }
 
 .about-content {
@@ -785,11 +786,9 @@ a {
 
 h2 {
   margin-top: 0;
-  margin-bottom: 66px;
   letter-spacing: 0.1em;
   color: #2d3651;
   font-family: "Roboto Slab";
-  font-size: 2.5rem;
   line-height: 1.2em;
 }
 
@@ -807,11 +806,11 @@ p {
 }
 
 .form-container {
-  display: grid;
   max-width: 1340px;
   margin: auto;
   padding-right: 20px;
   padding-left: 20px;
+  display: grid;
   gap: 20px;
 }
 
@@ -835,6 +834,7 @@ p {
   border-bottom-color: rgba(255, 255, 255, 0.25);
   background-color: rgba(255, 255, 255, 0.05);
   font-size: 1.125rem;
+  outline: none;
 }
 
 .form-item__input:hover, .form-item__input:focus {
@@ -843,23 +843,24 @@ p {
   background-color: rgba(255, 255, 255, 0.15);
 }
 
-.form-item__input:hover::-webkit-input-placeholder {
+.form-item__input :active::-webkit-input-placeholder {
   color: #d0d2d8;
 }
 
-.form-item__input:hover::-moz-placeholder {
+.form-item__input :active::-moz-placeholder {
   color: #d0d2d8;
 }
 
-.form-item__input:hover:-ms-input-placeholder {
+.form-item__input :active:-ms-input-placeholder {
   color: #d0d2d8;
 }
 
-.form-item__input:hover::-ms-input-placeholder {
+.form-item__input :active::-ms-input-placeholder {
   color: #d0d2d8;
 }
 
-.form-item__input:hover::placeholder {
+.form-item__input:hover,
+.form-item__input :active::placeholder {
   color: #d0d2d8;
 }
 
@@ -870,8 +871,10 @@ h3 {
 }
 
 .posts {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  max-width: 1340px;
+  margin: auto;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .posts-container {
@@ -1115,9 +1118,12 @@ article {
             justify-content: end;
     grid-template-columns: repeat(auto-fit, minmax(50px, -webkit-max-content));
     grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-    margin: -20px 0 0;
     padding: 0;
+    margin: 0 -20px 0 0;
     list-style: none;
+    width: 100%;
+    text-align: center;
+    /* @include unlist(0 0 0);*/
   }
   .header-navbar__item {
     margin: 0 10px;
@@ -1150,8 +1156,16 @@ article {
   .about-content p:first-of-type::after {
     right: -50px;
   }
+  h2 {
+    margin-bottom: 56px;
+    font-size: 2.5rem;
+  }
   .form-container {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .posts {
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
   .posts-container h2 {
     font-size: 40px;
@@ -1190,8 +1204,16 @@ article {
   .about-content p:first-of-type::after {
     right: -20px;
   }
+  h2 {
+    margin-bottom: 42px;
+    font-size: 2rem;
+  }
   .form-container {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .posts {
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
   .posts-container h2 {
     font-size: 32px;
@@ -1266,11 +1288,19 @@ article {
   .about-content p:first-of-type::after {
     right: -10px;
   }
+  h2 {
+    margin-bottom: 36px;
+    font-size: 1.5rem;
+  }
   .form .form-item:nth-of-type(1) {
     grid-column: 1 / span 2;
   }
   .form-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .posts {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   .posts-container h2 {
     font-size: 24px;
@@ -1329,6 +1359,15 @@ article {
   }
   .about-content p:first-of-type::after {
     display: none;
+  }
+  h2 {
+    margin-bottom: 36px;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .posts {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   .posts-container h2 {
     text-align: center;

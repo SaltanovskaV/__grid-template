@@ -11,7 +11,7 @@
   }
   &__container {
     display: grid;
-    align-items: center;
+    /* align-items: center;*/
 
     @extend %container;
     grid-template-columns: auto 1fr;
