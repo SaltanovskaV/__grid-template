@@ -96,10 +96,11 @@ a {
   @include sm {
     width: 100%;
   }
+  &:hover {
+    border: black 2px solid;
+  }
 }
-.btn--primary:hover {
-  border: black 2px solid;
-}
+
 .btn--secondary {
   width: 100%;
   height: 60px;

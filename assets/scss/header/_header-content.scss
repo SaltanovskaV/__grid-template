@@ -2,11 +2,11 @@
   position: relative;
   z-index: 1;
 
-  &_container {
+  &__container {
     @extend %container;
   }
 
-  &-title {
+  &__title {
     @include lg-min {
       margin: 0 0 53px 0;
     }
@@ -17,7 +17,7 @@
       margin: 0 0 33px 0;
     }
   }
-  &_action {
+  &__action {
     display: flex;
     justify-content: center;
 

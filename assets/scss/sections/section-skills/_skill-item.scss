@@ -6,17 +6,17 @@
   background-color: $color-primary;
 
   &:hover {
-    .skill-item_link {
+    .skill-item__link {
       color: $color-accent;
     }
-    .skill-item_image {
+    .skill-item__image {
       transform: scale(1.1);
     }
-    .skill-item_overlay {
+    .skill-item__overlay {
       opacity: 0.95;
     }
   }
-  &_title {
+  &__title {
     z-index: 1;
 
     margin: 0;
@@ -33,7 +33,7 @@
       font-size: 1.125rem;
     }
   }
-  &_link {
+  &__link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,7 +44,7 @@
 
     transition: color 0.5s;
   }
-  &_image {
+  &__image {
     transition: transform 0.5s;
 
     background-position: center;
@@ -52,7 +52,7 @@
 
     @include abs-position;
   }
-  &_overlay {
+  &__overlay {
     transition: opacity 0.5s;
 
     opacity: 0.8;

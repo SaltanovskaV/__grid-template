@@ -1,5 +1,5 @@
 .header-navbar {
-  &_btn {
+  &__btn {
     position: relative;
 
     width: 30px;
@@ -62,7 +62,7 @@
     }
   }
 
-  &_list {
+  &__list {
     /*margin: 0 -$gap 0 0;*/
     padding: 0;
 
@@ -95,7 +95,7 @@
     }
   }
 
-  &_item {
+  &__item {
     @include md-min {
       margin: 0 $gap / 2;
     }
@@ -103,7 +103,7 @@
       margin: $gap ($gap / 2);
     }
   }
-  &_link {
+  &__link {
     display: block;
 
     transition: color 0.5s;
