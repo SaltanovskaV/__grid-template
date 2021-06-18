@@ -9,8 +9,8 @@ $(document).ready(function () {
 });
 
 $(document).ready(function(){
-	$('.header-navbar_btn').on('click', function(){
-		$(this).toggleClass('header-navbar_btn--active');
-    $('.header-navbar_list').toggleClass('header-navbar_list--active');
+	$('.header-navbar__btn').on('click', function(){
+		$(this).toggleClass('header-navbar__btn--active');
+    $('.header-navbar__list').toggleClass('header-navbar__list--active');
 	});
 });
