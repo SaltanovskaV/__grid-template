@@ -33,7 +33,6 @@
   &-item__input {
     display: block;
     width: 100%;
-    width: 100%;
     height: 60px;
     padding-right: 30px;
     padding-left: 30px;
@@ -45,6 +44,10 @@
     background-color: rgba(255, 255, 255, 0.05);
     font-size: 1.125rem;
     outline: none;
+
+    &::placeholder {
+      color: #637588;
+    }
 
     &:hover,
     &:focus {

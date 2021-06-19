@@ -821,7 +821,6 @@ p {
 .form-item__input {
   display: block;
   width: 100%;
-  width: 100%;
   height: 60px;
   padding-right: 30px;
   padding-left: 30px;
@@ -835,6 +834,26 @@ p {
   background-color: rgba(255, 255, 255, 0.05);
   font-size: 1.125rem;
   outline: none;
+}
+
+.form-item__input::-webkit-input-placeholder {
+  color: #637588;
+}
+
+.form-item__input::-moz-placeholder {
+  color: #637588;
+}
+
+.form-item__input:-ms-input-placeholder {
+  color: #637588;
+}
+
+.form-item__input::-ms-input-placeholder {
+  color: #637588;
+}
+
+.form-item__input::placeholder {
+  color: #637588;
 }
 
 .form-item__input:hover, .form-item__input:focus {
@@ -873,8 +892,6 @@ h3 {
 .posts {
   max-width: 1340px;
   margin: auto;
-  padding-right: 20px;
-  padding-left: 20px;
 }
 
 .posts-container {
@@ -882,11 +899,12 @@ h3 {
   margin: auto;
   padding-right: 20px;
   padding-left: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .posts-container h2 {
   margin-top: 0;
-  margin-bottom: 56px;
 }
 
 .posts-grid {
@@ -1149,6 +1167,10 @@ article {
     gap: 10px;
     grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
   }
+  .about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
   .about-container {
     gap: 100px;
     grid-template-columns: 1fr 271px;
@@ -1168,7 +1190,8 @@ article {
     padding-bottom: 100px;
   }
   .posts-container h2 {
-    font-size: 40px;
+    margin-bottom: 56px;
+    font-size: 2.5rem;
   }
   .posts-grid {
     grid-template-areas: "p1 p1 p2 p3" "p4 p5 p6 p6";
@@ -1197,6 +1220,10 @@ article {
     gap: 10px;
     grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
   }
+  .about {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
   .about-container {
     gap: 40px;
     grid-template-columns: 1fr 271px;
@@ -1216,7 +1243,8 @@ article {
     padding-bottom: 80px;
   }
   .posts-container h2 {
-    font-size: 32px;
+    margin-bottom: 42px;
+    font-size: 2rem;
   }
   .posts-grid {
     -webkit-box-pack: center;
@@ -1281,6 +1309,10 @@ article {
     gap: 10px;
     grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
   }
+  .about {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
   .about-container {
     gap: 20px;
     grid-template-columns: 1fr 236px;
@@ -1303,7 +1335,8 @@ article {
     padding-bottom: 60px;
   }
   .posts-container h2 {
-    font-size: 24px;
+    margin-bottom: 36px;
+    font-size: 1.5rem;
   }
   .posts-grid {
     -webkit-box-pack: center;
@@ -1353,6 +1386,10 @@ article {
     gap: 20px;
     grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
   }
+  .about {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
   .about-container {
     gap: 20px;
     grid-template-columns: 1fr;
@@ -1371,7 +1408,8 @@ article {
   }
   .posts-container h2 {
     text-align: center;
-    font-size: 24px;
+    margin-bottom: 36px;
+    font-size: 1.5rem;
   }
   .posts-grid {
     -webkit-box-pack: center;

@@ -6,6 +6,23 @@
   letter-spacing: 0.055em;
   background-color: $color-gray-light;
 
+  @include lg-min {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @include lg-md {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  @include md-sm {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @include sm {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
   &-container {
     max-width: $ul;
     margin: auto;
