@@ -1,6 +1,6 @@
 .about {
-  width: 100%;
-  height: 100%;
+  /*width: 100%;
+  height: 100%;*/
   padding-top: 100px;
   padding-bottom: 100px;
   letter-spacing: 0.055em;
@@ -24,12 +24,12 @@
   }
 
   &-container {
+    display: grid;
     max-width: $ul;
     margin: auto;
     padding-right: $gap;
     padding-left: $gap;
-    display: grid;
-    width: 100%;
+    /*width: 100%;*/
 
     @include lg-min {
       gap: 100px;
@@ -50,20 +50,17 @@
   }
   &-content {
     padding: 0;
+
     & p:first-of-type {
       position: relative;
-
-      margin-top: -15px;
+      margin-top: -5px;
     }
     & p:first-of-type::after {
       position: absolute;
       top: 0;
-
       width: 2px;
       height: 200px;
-
       content: "";
-
       background-color: rgba(99, 117, 136, 0.1);
 
       @include lg-min {
@@ -93,37 +90,42 @@
       max-height: 480px;
     }
   }
-}
 
-h2 {
-  margin-top: 0;
-  letter-spacing: 0.1em;
-  color: $color-primary;
-  font-family: "Roboto Slab";
-  line-height: 1.2em;
+  h2 {
+    margin-top: 0;
+    letter-spacing: 0.1em;
+    color: $color-primary;
+    font-family: "Roboto Slab";
+    line-height: 1.2em;
 
-  @include lg-min {
-    margin-bottom: 56px;
-    font-size: 2.5rem;
+    @include lg-min {
+      margin-bottom: 56px;
+      font-size: 2.5rem;
+    }
+    @include lg-md {
+      margin-bottom: 42px;
+      font-size: 2rem;
+    }
+    @include md-sm {
+      margin-bottom: 36px;
+      font-size: 1.5rem;
+    }
+    @include sm {
+      margin-bottom: 36px;
+      font-size: 1.5rem;
+      text-align: center;
+    }
   }
-  @include lg-md {
-    margin-bottom: 42px;
-    font-size: 2rem;
+  p {
+    letter-spacing: 0.049em;
+    color: $color-gray;
+    line-height: 1.15em;
+    gap: $gap;
+    @include lg-min {
+      font-size: 1.125rem;
+    }
+    @include lg {
+      font-size: 1rem;
+    }
   }
-  @include md-sm {
-    margin-bottom: 36px;
-    font-size: 1.5rem;
-  }
-  @include sm {
-    margin-bottom: 36px;
-    font-size: 1.5rem;
-    text-align: center;
-  }
-}
-p {
-  letter-spacing: 0.049em;
-  color: $color-gray;
-  font-size: 18px;
-  line-height: 1.15em;
-  gap: $gap;
 }
