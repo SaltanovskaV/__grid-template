@@ -793,7 +793,6 @@ a {
 }
 
 .about p {
-  letter-spacing: 0.049em;
   color: #637588;
   line-height: 1.15em;
   gap: 20px;
@@ -1207,12 +1206,6 @@ article {
 @media (max-width: 992px) {
   h1 {
     font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 991.8px) {
-  .about p {
-    font-size: 1rem;
   }
 }
 
